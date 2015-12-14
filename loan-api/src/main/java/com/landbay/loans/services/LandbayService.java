@@ -86,7 +86,6 @@ public class LandbayService {
     public void deleteInvestment(int investmentId) throws UnexistentInvestment,InvestmentWithLoans {
         Investment investment = investmentRepository.findOne(investmentId);
         if (investment == null) {throw new UnexistentInvestment(investmentId);}
-        investmentRepository.delete(investment);
         if (investment.getLendings() == null || investment.getLendings().isEmpty()) {
             investmentRepository.delete(investment);
         } else {

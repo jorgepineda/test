@@ -97,5 +97,24 @@ public class LandbayController {
         return null;
     }
 
+    @RequestMapping(value="/delete-loan/{loanId}", method= RequestMethod.GET)
+    public @ResponseBody void deleteLoan(@PathVariable int loanId) {
+        try {
+            landbayService.deleteLoan(loanId);
+        } catch(Exception e) {
+            e.printStackTrace();
+            logger.warning(e.getMessage());
+        }
+    }
+
+    @RequestMapping(value="/delete-investment/{investmentId}", method= RequestMethod.GET)
+    public @ResponseBody void deleteInvestment(@PathVariable int investmentId) {
+        try {
+            landbayService.deleteInvestment(investmentId);
+        } catch(Exception e) {
+            e.printStackTrace();
+            logger.warning(e.getMessage());
+        }
+    }
 
 }
