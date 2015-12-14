@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Landbay:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="loan.war">
+      <element id="artifact" artifact-name="Landbay:war exploded" />
+    </root>
+  </artifact>
+</component>

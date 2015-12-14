@@ -1,0 +1,30 @@
+application:
+  version: 1.0.0
+
+server:
+  context-path: "/loans"
+  port: 8083
+db:
+  database: "H2"
+  driver: "org.h2.Driver"
+#  url:"jdbc:h2.mem:datajpa"
+  username: "landbay"
+  password: ""
+
+
+# JPA - Hibernate Settings
+hibernate:
+  dialect: org.hibernate.dialect.H2Dialect
+  show_sql: false
+  format_sql: true
+  generate_ddl: true
+  hbm2ddl:
+    auto: create
+  auto_close_session: true
+  connection:
+    useUnicode: true
+    characterEncoding: UTF-8
+    charSet: UTF-8
+  use_sql_comments: true
+  generate_statistics: true
+

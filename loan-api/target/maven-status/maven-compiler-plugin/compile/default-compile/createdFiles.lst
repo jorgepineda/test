@@ -1,0 +1,2 @@
+loans\model\Loan.class
+com\landbay\loans\configuration\db\DBConfiguration.class
